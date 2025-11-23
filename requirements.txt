@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+whisper-timestamped
+sentence-transformers
+vaderSentiment
+language-tool-python
+python-multipart
+numpy
+torch
+neo4j
