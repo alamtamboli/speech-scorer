@@ -129,20 +129,7 @@ Real‑time scoring as user types.
 
 ---
 
-## 🌍 Deployment Options
 
-### Backend
-- Render (free)
-- Railway
-- AWS EC2 Free Tier
-- Local host
-
-### Frontend
-- Vercel
-- Netlify
-- GitHub Pages
-
----
 
 ## 🤝 Contributing
 Pull requests are welcome!  
