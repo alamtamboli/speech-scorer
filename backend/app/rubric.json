@@ -1,0 +1,207 @@
+{
+  "title": "Self Introduction Evaluation Rubric (Hybrid Model)",
+  "source_files": {
+    "excel": "/mnt/data/c7d6b334-d6d3-42c9-9bac-0edfe57f036e.xlsx",
+    "pdf": "/mnt/data/f06e2b16-fefc-4ec5-aa99-7dc866826a57.pdf"
+  },
+  "total_weight": 100,
+  "categories": [
+    {
+      "id": "content_structure",
+      "name": "Content & Structure",
+      "weight": 40,
+      "criteria": [
+        {
+          "id": "situation_level",
+          "name": "Situation Level",
+          "description": "Checks if the introduction fits the expected structure and context",
+          "weight": 5,
+          "bands": [
+            { "label": "No Situation", "keywords": ["hi", "hello"], "score": 1 },
+            { "label": "Normal", "keywords": ["good morning", "good afternoon", "good evening", "hello everyone"], "score": 2 },
+            { "label": "Good", "keywords": ["introduce myself", "my name is", "let me introduce"], "score": 4 },
+            { "label": "Very Good", "keywords": ["warm welcome", "pleased to introduce"], "score": 5 }
+          ]
+        },
+        {
+          "id": "keyword_relevance",
+          "name": "Keyword Relevance",
+          "description": "Checks if essential introduction keywords are present",
+          "weight": 15,
+          "keyword_groups": [
+            ["name", "my name is", "i am"],
+            ["education", "studied", "degree", "school", "college"],
+            ["location", "from", "live in"],
+            ["family", "brother", "sister", "father", "mother"],
+            ["interests", "hobbies", "like to", "enjoy"],
+            ["goals", "aim", "future plan"]
+          ],
+          "bands": [
+            { "label": "Excellent", "min_groups": 5, "score": 20 },
+            { "label": "Good", "min_groups": 4, "score": 16 },
+            { "label": "Average", "min_groups": 3, "score": 12 },
+            { "label": "Below Average", "min_groups": 2, "score": 8 },
+            { "label": "Poor", "min_groups": 1, "score": 4 }
+          ]
+        },
+        {
+          "id": "order_flow",
+          "name": "Order & Flow",
+          "description": "Checks if introduction order is logically followed",
+          "weight": 5,
+          "expected_order": [
+            "greeting",
+            "name",
+            "education",
+            "family",
+            "experience",
+            "strengths",
+            "weaknesses",
+            "hobbies",
+            "goals"
+          ],
+          "bands": [
+            { "label": "Correct Order", "score": 5 },
+            { "label": "Partial Order", "score": 3 },
+            { "label": "No Order", "score": 0 }
+          ]
+        },
+        {
+          "id": "length",
+          "name": "Transcript Length",
+          "description": "Checks if transcript length is between recommended minimum and maximum",
+          "weight": 10,
+          "min_words": 70,
+          "max_words": 150
+        },
+        {
+          "id": "coherence",
+          "name": "Coherence & Flow",
+          "description": "How smoothly ideas connect (semantic coherence between adjacent sentences)",
+          "weight": 5,
+          "bands": [
+            { "label": "High", "score": 5 },
+            { "label": "Good", "score": 4 },
+            { "label": "Average", "score": 3 },
+            { "label": "Low", "score": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speech_rate",
+      "name": "Speech Rate",
+      "weight": 10,
+      "criteria": [
+        {
+          "id": "wpm_rate",
+          "name": "Words Per Minute",
+          "description": "Evaluates speaking speed",
+          "weight": 5,
+          "bands": [
+            { "range": "161+", "label": "Too Fast", "score": 2 },
+            { "range": "141-160", "label": "Fast", "score": 6 },
+            { "range": "110-140", "label": "Ideal", "score": 10 },
+            { "range": "90-109", "label": "Slow", "score": 8 },
+            { "range": "<90", "label": "Very Slow", "score": 6 }
+          ]
+        },
+        {
+          "id": "pacing_variation",
+          "name": "Speech Pacing Variation",
+          "description": "Consistency of per-word durations (lower is better)",
+          "weight": 3
+        },
+        {
+          "id": "pause_frequency",
+          "name": "Pause Frequency",
+          "description": "Count of long pauses (>0.3s) in the audio",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "language_grammar",
+      "name": "Language & Grammar",
+      "weight": 20,
+      "criteria": [
+        {
+          "id": "grammar_errors",
+          "name": "Grammar Error Rate",
+          "description": "Grammatical error count per 100 words",
+          "weight": 10,
+          "bands": [
+            { "range": "0.0-1.0", "score": 10 },
+            { "range": "1.1-2.0", "score": 8 },
+            { "range": "2.1-3.0", "score": 6 },
+            { "range": "3.1-4.0", "score": 4 },
+            { "range": "4.1-5.0", "score": 2 },
+            { "range": "5.1+", "score": 0 }
+          ]
+        },
+        {
+          "id": "vocab",
+          "name": "Vocabulary Richness (TTR)",
+          "description": "Type-token ratio range scoring",
+          "weight": 10,
+          "bands": [
+            { "range": "0.70-1.00", "score": 10 },
+            { "range": "0.60-0.69", "score": 8 },
+            { "range": "0.50-0.59", "score": 6 },
+            { "range": "0.40-0.49", "score": 4 },
+            { "range": "0.30-0.39", "score": 2 },
+            { "range": "0.00-0.29", "score": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clarity",
+      "name": "Clarity",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "filler_rate",
+          "name": "Filler Word Rate",
+          "description": "Counts fillers like um, uh, like, so, you know",
+          "weight": 10,
+          "keywords": ["um", "uh", "like", "you know", "so"],
+          "bands": [
+            { "range": "0-1", "score": 15 },
+            { "range": "1-2", "score": 12 },
+            { "range": "2-3", "score": 9 },
+            { "range": "3-4", "score": 6 },
+            { "range": "4+", "score": 3 }
+          ]
+        },
+        {
+          "id": "repetition",
+          "name": "Repetition / Redundancy",
+          "description": "Detects repeated sentences or phrases",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "engagement",
+      "name": "Engagement",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "sentiment",
+          "name": "Sentiment Positivity",
+          "description": "Sentiment analysis score bands",
+          "weight": 15,
+          "bands": [
+            { "range": ">0.80", "score": 15 },
+            { "range": "0.70-0.79", "score": 12 },
+            { "range": "0.60-0.69", "score": 10 },
+            { "range": "0.50-0.59", "score": 9 },
+            { "range": "0.40-0.49", "score": 6 },
+            { "range": "<=0.30", "score": 3 }
+          ]
+        }
+      ]
+    }
+  ]
+}
